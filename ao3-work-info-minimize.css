@@ -1,0 +1,30 @@
+@-moz-document domain("archiveofourown.org") {
+    .work .wrapper {
+        max-height: 1.6em;
+        overflow: auto;
+        transition: max-height 2s ease-out;
+    }
+    
+    .work .wrapper:hover {
+        max-height: 20em;
+        transition: max-height 2s ease-in;
+    }
+    
+    .work .wrapper::before {
+        content: ' -- Hover for more --';
+        background: #404040;
+        border: 1px solid grey;
+        display: block;
+        height: 1em;
+        padding: .25em;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+    
+    .work .wrapper:hover::before {
+        content: ' -- Leave to minimize --';
+        border: 1px solid grey;
+    }
+    }

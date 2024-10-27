@@ -1,0 +1,27 @@
+@-moz-document domain("archiveofourown.org") {
+    #notes, div[id*="_endnotes"] {
+        max-height: 1.25em;
+        min-height: 1em !important;
+        transition: max-height 0.7s ease-out;
+        overflow: auto;
+    }
+    
+    #notes:hover, div[id*="_endnotes"]:hover {
+        max-height: 10em;
+        transition: max-height 0.7s ease-in;
+    }
+    
+    #notes h3.heading div[id*="_endnotes"] h3.heading {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+    
+    #notes h3.heading::after, div[id*="_endnotes"] h3.heading::after {
+        content: ' ►';
+    }
+    
+    #notes:hover h3.heading::after, div[id*="_endnotes"]:hover h3.heading::after {
+        content: ' ▼';
+    }
+    }
