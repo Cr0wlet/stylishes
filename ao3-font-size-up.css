@@ -1,12 +1,24 @@
+/* ==UserStyle==
+@name           "AO3 change work font"
+@namespace      "github.com/openstyles/stylus"
+@version        "1.0.0"
+@description    "Change the chapter/work body's font."
+@author         "Crowlet"
+@preprocessor default
+    @var text  h2title        "Story title size"        3em
+    @var text  h3title        "Chapter title size"      2em
+    @var text  articlep       "Chapter <p> size"        1.25em
+==/UserStyle== */
+
 @-moz-document domain("archiveofourown.org") {
     h2.title {
-        font-size: 3em;
+        font-size: var(--h2title);
     }
     h3.title {
-        font-size: 2em;
+        font-size: var(--h3title);
     }
     
     div[role="article"] {
-        font-size: 1.25em;
+        font-size: var(--articlep);
     }
     }

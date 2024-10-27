@@ -1,5 +1,15 @@
+/* ==UserStyle==
+@name           "AO3 change work font"
+@namespace      "github.com/openstyles/stylus"
+@version        "1.0.0"
+@description    "Change the chapter/work body's font."
+@author         "Crowlet"
+@preprocessor default
+    @var select  fontName        "Font"        ["Lucida Bright", "Lucida Sans Unicode", "Lucida Sans Typewriter", "Georgia", "Times New Roman", "Consolas", "Verdana", "Arial", "MV Boli", "Segoe Print", "Segoe Script", "Footlight MT Light", "Monocraft"]
+==/UserStyle== */
+
 @-moz-document domain("archiveofourown.org") {
     div[role="article"] p, h1, h2, h3, h4, h5, h6, .heading {
-        font-family: "Lucida Bright", serif;
+        font-family: var(--fontName), serif !important;
     }
     }
