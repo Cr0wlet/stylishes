@@ -1,6 +1,16 @@
+/* ==UserStyle==
+@name           "AO3 notes minimize"
+@namespace      "github.com/Cr0wlet/stylishes"
+@version        "1.0.0"
+@description    "Change the chapter/work body's font."
+@author         "Crowlet"
+@preprocessor default
+    @var text  minimHeight        "'Notes:' height"        1.25em
+==/UserStyle== */
+
 @-moz-document domain("archiveofourown.org") {
     #notes, div[id*="_endnotes"] {
-        max-height: 1.25em;
+        max-height: var(--minimHeight);
         min-height: 1em !important;
         transition: max-height 0.7s ease-out;
         overflow: auto;
@@ -11,7 +21,8 @@
         transition: max-height 0.7s ease-in;
     }
     
-    #notes h3.heading div[id*="_endnotes"] h3.heading {
+    #notes h3.heading, div[id*="_endnotes"] h3.heading {
+        background-color: #333 !important;
         position: sticky;
         top: 0;
         z-index: 2;
